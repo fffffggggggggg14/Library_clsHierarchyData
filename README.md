@@ -1,4 +1,4 @@
-Markdown# clsHierarchyData <img align="right" src="https://img.shields.io/badge/C++-17-blue.svg?style=flat-square" alt="C++17">
+clsHierarchyData <img align="right" src="https://img.shields.io/badge/C++-17-blue.svg?style=flat-square" alt="C++17">
 
 **A clean, efficient, and fully generic Undo/Redo (Memento Pattern) manager in modern C++.**
 
