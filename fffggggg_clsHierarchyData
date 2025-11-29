@@ -1,0 +1,40 @@
+#include <iostream>
+#include "clsStack.h"
+using namespace std;
+
+template <class t_c>
+class clsHierarchyData {
+    private:
+        clsStack <t_c> _undo;
+        clsStack <t_c> _redo;
+        t_c _data;
+
+    public:
+        void set(t_c data){
+            _undo.push(_data);
+            _data = data;
+        }
+
+        t_c get(void){
+            return _data;
+        }
+
+
+        void undo(void){
+            if(!_undo.empty()){
+                _redo.push(_data);
+                _data = _undo.top();
+                _undo.pop();
+            }
+        }
+
+        void redo(void){
+            if(!_redo.empty()){
+                _undo.push(_data);
+                _data = _redo.top();
+                _redo.pop();
+            }
+        }
+
+
+};
